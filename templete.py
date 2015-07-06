@@ -4,7 +4,6 @@ from xml.dom import minidom
 import os
 import sys
 
-z_list=['CPU Load Average', 'Memory Usage', 'IOStat xvda Util-IO', 'Eth0 Network Traffic', 'Eth1 Network Traffic']
 	
 help='''python template.py $text_file $xml_file
 $text_file formart

@@ -1,4 +1,4 @@
-yijiabao
-srv-yijiabao-db2
-srv-yijiabao-lb1
-srv-yijiabao-lb2
+test
+srv-test-db2
+srv-test-lb1
+srv-test-lb2
