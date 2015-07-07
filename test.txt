@@ -1,4 +1,5 @@
 test
+srv-test-web1
 srv-test-db2
 srv-test-lb1
 srv-test-lb2
