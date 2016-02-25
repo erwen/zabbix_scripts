@@ -38,13 +38,14 @@ def check_text(file):
 		sys.exit()
 		pass
 
-def get_ioformart(z_list):
-        answer=raw_input('please defind the io graph(default for aliyun):')
+def get_ioformart():
+        answer=raw_input('please defind the io graph,default for aliyun(IOStat hda-xvdb %util):')
         if answer == '':
                 io_graph='IOStat hda-xvdb %util'
         else:
                 io_graph=answer
         z_list=['CPU Load Average', 'Memory Usage', io_graph, 'Eth0 Network Traffic', 'Eth1 Network Traffic']
+        return z_list
 
 def get_server(X, Y, NAME, HOST):
 	item = SubElement(items, 'screen_item')
@@ -91,7 +92,10 @@ s_list=[ ]
 f_list=[ ]
 check_text(t_file)
 check_xml(x_file)
-get_ioformart(z_list)
+
+# defined graphs list(z_list)
+z_list = get_ioformart()
+
 f = open(t_file, 'r')
 for f_line in f.readlines():
 	f_line=f_line.strip('\n')
